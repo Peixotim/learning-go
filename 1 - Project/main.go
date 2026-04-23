@@ -76,5 +76,59 @@ func main(){
 		
 		fmt.Printf("The result of this subtraction is : %2.f\n", subtraction)
 		break;
+		case "3" : 
+		fmt.Print("Enter a number to multiply: ")
+		scanner.Scan()
+		input := scanner.Text()
+
+		numberOne , err := strconv.ParseFloat(input,64)
+
+		if err != nil{
+			fmt.Println("Invalid Number !")
+			return
+		}
+		
+		fmt.Print("Enter another number to multiply: ")
+		scanner.Scan()
+		inputN2 := scanner.Text()
+
+		numberTwo , err := strconv.ParseFloat(inputN2,64)
+
+		if err != nil {
+			fmt.Println("Invalid Number !")
+			return
+		}
+
+		multiply := calculator.Multiplication(numberOne,numberTwo);
+		
+		fmt.Printf("The result of this subtraction is : %f\n", multiply)
+		break;
+	case "4" : 
+		fmt.Print("Enter a number to division: ")
+		scanner.Scan()
+		input := scanner.Text()
+
+		numberOne , err := strconv.ParseFloat(input,64)
+
+		if err != nil{
+			fmt.Println("Invalid Number !")
+			return
+		}
+		
+		fmt.Print("Enter another number to division: ")
+		scanner.Scan()
+		inputN2 := scanner.Text()
+
+		numberTwo , err := strconv.ParseFloat(inputN2,64)
+
+		if err != nil {
+			fmt.Println("Invalid Number !")
+			return
+		}
+
+		division := calculator.Division(numberOne,numberTwo);
+		
+		fmt.Printf("The result of this subtraction is : %2.f\n", division)
+		break;
 	}
 }
