@@ -17,4 +17,11 @@ func main(){
 	fmt.Println("SliceOne : ",sliceOne)
 	sliceOne = append(sliceOne, "Good Morning !")
 	fmt.Println("SliceOne with append : " , sliceOne)
+
+	//Intern Arrays
+
+	slice := make([]float64,10,15) //Caso passemos da capacidade maxima, o go dobra o valor do slice exemplo de 16 -> 32
+	fmt.Println(slice)
+	fmt.Println(len(slice)) //Length
+	fmt.Println(cap(slice)) //Capacity
 }
